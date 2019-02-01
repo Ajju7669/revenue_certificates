@@ -1,0 +1,39 @@
+
+{% extends 'base.html'%}
+{% block head %}
+ <title>Complaint Box | Login</title> 
+{% endblock %}
+{% block sai %}
+{% endblock %}
+{% block body %}
+<style>
+div.center {
+    margin:auto;
+    width: 60%;
+ 
+    padding: 10px;
+  text-align: center;
+}
+  legend
+{
+font-size:30px;
+}
+</style>
+  <body>
+
+    {% if user.is_authenticated %}
+    <div class="center">
+    <h2>
+      already logged in</h2>
+    {% else %}
+    <div class="center">
+      <legend>Log In</legend>
+    <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">login</button>
+    </form>
+    {% endif %}
+  </body>
+</div>
+{% endblock %}

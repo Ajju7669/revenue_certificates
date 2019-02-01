@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+<head>
+		{% block head %}
+		<title>Complaint Box | home</title>
+            <style>
+div.card {
+    margin:auto;
+    padding: 20px;
+    text-align: left;
+    font-size: 100%;
+    font-family: verdana;
+    font-style: italic;
+    width: 110rem;
+}
+legend
+	{
+	  font-size:30px;
+	  text-align:center;
+	  font-family: verdana;
+	}
+</style>
+		
+{% endblock %}
+	</head>
+{% block sai%}
+{% endblock %}
+{% block body %}
+<body>
+<div class="card">
+<h1>Welcome</h1>
+<table border="1" width="800px">
+<tr>
+
+{% for post in list1%}
+<td>{{post.Name}}</td>
+
+	<td>{{post.SurName}}</td>
+
+
+	<td>{{post.FatherName}}</td>
+
+<td>{{post.MotherName}}</td>
+<td>{{post.Certificate}}</td></tr>
+
+{% endfor %}
+</div>
+
+
+
+</body>
+{% endblock %}
+
+

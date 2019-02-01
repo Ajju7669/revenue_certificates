@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<head>
+		{% block head %}
+		<title>| Sign up</title>
+		{% endblock %}
+</head>
+
+{% block sai %}
+{% endblock %}
+{% block chintu %}
+{% endblock %}
+{% block nav1 %}
+{% endblock %}
+{% block body %}
+<style>
+div.center {
+    margin:auto;
+    width: 70%;
+    padding: 60px;
+    font-size: 100%;
+  text-align: left;
+  font-family: verdana;
+}
+  legend
+{
+font-size:30px;
+  text-align: left;
+}
+form {
+  position: center;
+  width  : 690px;
+  height : 500px;
+}
+</style>
+<body>
+<div class="center">
+  
+	<legend>Application</legend>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+    {{Name}}
+    {{FatherName}}
+   </form>
+ 
+</div>
+   {% endblock %}
+</body>
+

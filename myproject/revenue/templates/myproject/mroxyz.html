@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+<head>
+		{% block head %}
+		<title>Complaint Box | home</title>
+		
+{% endblock %}
+	</head>
+{% block sai%}
+{% endblock %}
+{% block body %}
+<body>
+<style>
+div.card {
+    margin:auto;
+    padding: 20px;
+    text-align: left;
+    font-size: 100%;
+    font-family: verdana;
+    font-style: italic;
+    width: 110rem;
+}
+	  legend
+	{
+	  font-size:30px;
+	  text-align:center;
+	  font-family: verdana;
+	}
+</style>
+<div class="container">
+   <form action="" method="post" enctype="multipart/form-data">
+                <h1>Login Form</h1>
+<div>
+                    <label><b>Username</b></label>
+                    <input type="text" id="username" placeholder="Enter username" required="">                  
+                </div>
+
+                <div class="password">
+                    <label id="labelp"><b>Password</b></label>
+                    <input type="text" required="" placeholder="Enter password" id="password">
+                </div>
+
+                <div class="submitb">
+                    <input type="submit" value="Log In">
+
+                </div>
+</div>
+</div>
+
+
+
+</body>
+{% endblock %}
+
+

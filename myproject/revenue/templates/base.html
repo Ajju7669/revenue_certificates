@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <style>
+    legend
+{
+  font-size:30px;
+  text-align:center;
+  font-family: verdana;
+}</style>
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		{% block head %}
+		<title>Complaint Box</title>
+    <h1> <center>Telangana Revenue Department</center></h1>
+
+		{% endblock %}
+	</head>
+  {% block nav1 %}
+      <nav class="navbar navbar-default" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-
+            </button>
+          </div>
+                    {% if user.is_authenticated %}  
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="firstapp/home/">Home</a></li>
+              <li><a href="firstapp/apply/">Apply</a></li>
+            
+              <li><a href="firstapp/status/">Appication Status</a></li>
+              
+              <li><a href="./logout/">Logout</a></li>
+            </ul>
+          </div>
+            {% else %}
+              {% block chintu%}
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="firstapp/login/">Login</a></li>
+              
+                  <li><a href="firstapp/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+              </div>  
+              {% block sai %}
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="firstapp/login/">Login</a></li>
+              
+                  <li><a href="firstapp/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+              </div>  
+              {% endblock %}
+            {% endblock %}
+            
+
+            {% endif %}
+          </div>
+        </div>
+      </nav>  
+    {% endblock %}  
+  
+
+
+	<body>
+{% block body %}
+    {% endblock %}
+	</body>
+  
+</html>
